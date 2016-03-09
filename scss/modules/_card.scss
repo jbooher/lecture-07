@@ -1,0 +1,96 @@
+.card {
+  width: 677px;
+  height: 381px;
+  background-color: #333333;
+
+  &--nav {
+    padding: 10px;
+    font-size: $small-font;
+  }
+
+  &--nav-item {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $gray;
+
+    &:hover {
+      color: #5ebaeb;
+    }
+
+    &:hover::after {
+      color: $gray;
+    }
+  }
+
+  &--nav-item::after {
+    margin: 0 0 0 4px;
+    content: "|";
+  }
+
+  // IMDbPro Link
+  &--nav-item:nth-child(4) {
+    text-transform: none;
+  }
+
+  // No bars on more or share
+  &--nav-item:nth-last-child(2)::after,
+  &--nav-item:last-child::after {
+    content: "";
+    margin: 0;
+  }
+
+  &--nav-item:last-child {
+    margin: 0 0 0 80px;
+  }
+
+  &--info {
+    @extend .clearfix;
+    padding: 0 14px;
+  }
+
+  &--add--button {
+    height: 44px;
+    width: 40px;
+    background-color: #5b5b5b;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    padding: 6px 0 0;
+    float: left;
+  }
+
+  &--title-box {
+    float: left;
+    width: 410px;
+    margin: 0 0 0 10px;
+  }
+
+  &--title {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin: 0 0 4px;
+  }
+
+  &--title-small {
+    color: $gray;
+    font-size: 1rem;
+  }
+
+  &--meta {
+    color: $gray;
+    font-size: $small-font;
+  }
+
+  &--images {
+    padding: 14px;
+  }
+
+  &--image {
+    float: left;
+  }
+
+  &--video {
+    float: left;
+  }
+}
